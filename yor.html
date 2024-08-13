@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save the Date</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: 'Lora', serif;
+            color: #333;
+            background-image: url('https://images.pexels.com/photos/1449282/pexels-photo-1449282.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            animation: backgroundAnimation 20s infinite alternate;
+        }
+        .card {
+            position: relative;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            animation: fadeIn 2s ease-in-out, cardHover 0.5s ease-in-out;
+            overflow: hidden;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background-image: url('https://images.pexels.com/photos/1495755/pexels-photo-1495755.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: -1;
+            animation: backgroundOverlayAnimation 30s infinite alternate;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            color: #333;
+            margin: 0;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 15px 0;
+            color: #555;
+        }
+        .heart {
+            color: #e63946;
+            font-size: 1.8em;
+        }
+        .footer {
+            font-size: 1em;
+            color: #888;
+            margin-top: 20px;
+        }
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+        @keyframes backgroundOverlayAnimation {
+            0% { opacity: 0.1; }
+            100% { opacity: 0.3; }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes cardHover {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.02);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Save the Date</h1>
+        <p class="heart">Yogesh ❤️ Trisha</p>
+        <p class="date">10th May 2025</p>
+        <p class="location">Our Wedding Date</p>
+        <p class="footer">Can't wait to celebrate with you!</p>
+    </div>
+</body>
+</html>
